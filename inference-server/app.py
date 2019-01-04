@@ -7,6 +7,9 @@ import numpy as np
 from PIL import Image
 from darkflow.net.build import TFNet
 
+from utils import grab_img, obj_exists_in_img
+from config.app import interested_objects
+
 options = {
 	'model': 'cfg/tiny-yolo-voc.cfg',
 	'load': 'bin/tiny-yolo-voc.weights',
@@ -15,18 +18,12 @@ options = {
 
 tfnet = TFNet(options)
 
-interested_object = 'bird'
-
 while True:
-	response = requests.get('http://0.0.0.0:8000/image')
-	img = Image.open(BytesIO(response.content))
+	img = grab_img()
+	tfnet_result = tfnet.return_predict(img)
 
-	curr_img_cv2 = cv2.cvtColor(np.array(img), cv2.COLOR_RGB2BGR)
+	for obj in interested_objects:
+		if obj_exists_in_img(tfnet_result, obj):
+			pass
 
-	result = tfnet.return_predict(curr_img_cv2)
-
-	for detection in result:
-		if detection['label'] == interested_object:
-			curr_img.save('birds/%i.jpg' % birdsSeen)
-
-	time.sleep(4)
+	time.sleep(5)
