@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if ! [[ -d venv ]]; then
+if ! [[ -d setup/venv ]]; then
     cd setup && ./create_venv.sh && cd ..
 fi
 
