@@ -23,7 +23,11 @@ def search_tfnet_result_for_object(tfnet_result: list, obj: str) -> Union[None, 
 		return None
 
 def draw_bounding_box(img_cv2: np.ndarray, detection: dict):
-	''' Given detection and an image, draw bounding box '''
+	'''
+	Given detection and an image, draw bounding box
+	
+	https://github.com/thtrieu/darkflow/issues/571#issuecomment-365831589
+	'''
 
 	img_cv2 = cv2.rectangle(
 		img_cv2,
