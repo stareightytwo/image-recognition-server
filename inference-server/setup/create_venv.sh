@@ -15,6 +15,10 @@ if ! [[ -d darkflow ]]; then
 	cd darkflow
 
 	pip3 install .
-fi
 
-# TODO: install tensorflow
+	git clone https://github.com/leetenki/YOLOtiny_v2_chainer.git
+	mkdir bin
+	mv YOLOtiny_v2_chainer/tiny-yolo-voc.weights bin/
+
+	rm -rf YOLOtiny_v2_chainer
+fi

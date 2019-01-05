@@ -6,4 +6,4 @@ fi
 
 source setup/venv/bin/activate
 
-gunicorn --reload --config server/configs/gunicorn_config.py "app"
+gunicorn --reload --bind 0.0.0.0:7999 --config server/config/gunicorn.py "server.app:create_app()"
