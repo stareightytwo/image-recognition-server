@@ -1,0 +1,15 @@
+class models:
+   def add_weights(self):
+        return 0
+    def add_biases(self):
+        return 0
+    def conv_layer(self):
+        return 0
+    def pooling_layer(self):
+        return 0
+    def flattening_layer(self):
+        return 0
+    def fully_connected_layer(self):
+        return 0
+    def activation_layer(self):
+        return 0
