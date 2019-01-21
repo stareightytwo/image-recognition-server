@@ -1,0 +1,251 @@
+[INFO] training network...
+Epoch 1/20
+141/141 [==============================] - 893s - loss: 5.2817 - acc: 0.0100 - val_loss: 5.1965 - val_acc: 0.0252
+Epoch 2/20
+141/141 [==============================] - 852s - loss: 5.0602 - acc: 0.0423 - val_loss: 4.9846 - val_acc: 0.0437
+Epoch 3/20
+141/141 [==============================] - 854s - loss: 4.6931 - acc: 0.0921 - val_loss: 4.6175 - val_acc: 0.0908
+Epoch 4/20
+141/141 [==============================] - 854s - loss: 4.1758 - acc: 0.1438 - val_loss: 4.0873 - val_acc: 0.1471
+Epoch 5/20
+141/141 [==============================] - 851s - loss: 3.5792 - acc: 0.2099 - val_loss: 3.5668 - val_acc: 0.1882
+Epoch 6/20
+141/141 [==============================] - 850s - loss: 3.0491 - acc: 0.2897 - val_loss: 3.0765 - val_acc: 0.2631
+Epoch 7/20
+141/141 [==============================] - 852s - loss: 2.6202 - acc: 0.3686 - val_loss: 2.8990 - val_acc: 0.2671
+Epoch 8/20
+141/141 [==============================] - 852s - loss: 2.2805 - acc: 0.4281 - val_loss: 2.7185 - val_acc: 0.3188
+Epoch 9/20
+141/141 [==============================] - 857s - loss: 1.9806 - acc: 0.4966 - val_loss: 2.4122 - val_acc: 0.3632
+Epoch 10/20
+141/141 [==============================] - 853s - loss: 1.7841 - acc: 0.5512 - val_loss: 2.3339 - val_acc: 0.3970
+Epoch 11/20
+141/141 [==============================] - 857s - loss: 1.6085 - acc: 0.5796 - val_loss: 2.1775 - val_acc: 0.4201
+Epoch 12/20
+141/141 [==============================] - 853s - loss: 1.4528 - acc: 0.6272 - val_loss: 2.1175 - val_acc: 0.4367
+Epoch 13/20
+141/141 [==============================] - 861s - loss: 1.2970 - acc: 0.6660 - val_loss: 2.0059 - val_acc: 0.4672
+Epoch 14/20
+141/141 [==============================] - 855s - loss: 1.1835 - acc: 0.6905 - val_loss: 1.9821 - val_acc: 0.4805
+Epoch 15/20
+141/141 [==============================] - 852s - loss: 1.0774 - acc: 0.7219 - val_loss: 1.9672 - val_acc: 0.4891
+Epoch 16/20
+141/141 [==============================] - 864s - loss: 1.0105 - acc: 0.7402 - val_loss: 1.8770 - val_acc: 0.5030
+Epoch 17/20
+141/141 [==============================] - 858s - loss: 0.8980 - acc: 0.7772 - val_loss: 1.8750 - val_acc: 0.5003
+Epoch 18/20
+141/141 [==============================] - 859s - loss: 0.8261 - acc: 0.7829 - val_loss: 1.8698 - val_acc: 0.5202
+Epoch 19/20
+141/141 [==============================] - 883s - loss: 0.7718 - acc: 0.8027 - val_loss: 1.8514 - val_acc: 0.5268
+Epoch 20/20
+141/141 [==============================] - 857s - loss: 0.7133 - acc: 0.8228 - val_loss: 1.7715 - val_acc: 0.5288
+[INFO] evaluating network...
+/Users/mbenkhal/anaconda/lib/python3.6/site-packages/sklearn/metrics/classification.py:1143: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+                                    precision    recall  f1-score   support
+
+        001.Black_footed_Albatross       0.78      0.64      0.70        11
+              002.Laysan_Albatross       0.67      0.80      0.73         5
+               003.Sooty_Albatross       0.50      0.25      0.33         4
+             004.Groove_billed_Ani       1.00      0.70      0.82        10
+                005.Crested_Auklet       0.33      0.12      0.18         8
+                  006.Least_Auklet       0.56      1.00      0.71         5
+               007.Parakeet_Auklet       0.50      0.67      0.57         6
+             008.Rhinoceros_Auklet       0.45      0.71      0.56         7
+              009.Brewer_Blackbird       0.14      0.33      0.20         3
+          010.Red_winged_Blackbird       1.00      0.29      0.44         7
+               011.Rusty_Blackbird       0.50      0.50      0.50         6
+       012.Yellow_headed_Blackbird       0.75      0.86      0.80         7
+                      013.Bobolink       1.00      0.57      0.73         7
+                014.Indigo_Bunting       0.80      0.44      0.57         9
+                015.Lazuli_Bunting       0.67      0.86      0.75         7
+               016.Painted_Bunting       0.86      0.67      0.75         9
+                      017.Cardinal       0.44      0.44      0.44         9
+               018.Spotted_Catbird       1.00      0.80      0.89         5
+                  019.Gray_Catbird       0.82      0.75      0.78        12
+          020.Yellow_breasted_Chat       0.60      0.75      0.67         8
+                021.Eastern_Towhee       1.00      0.75      0.86         4
+              022.Chuck_will_Widow       0.00      0.00      0.00         6
+              023.Brandt_Cormorant       0.45      0.62      0.53         8
+           024.Red_faced_Cormorant       0.00      0.00      0.00         3
+             025.Pelagic_Cormorant       0.67      0.57      0.62         7
+               026.Bronzed_Cowbird       0.75      0.43      0.55         7
+                 027.Shiny_Cowbird       0.80      0.36      0.50        11
+                 028.Brown_Creeper       0.83      0.62      0.71         8
+                 029.American_Crow       0.10      0.50      0.16         4
+                     030.Fish_Crow       0.75      0.27      0.40        11
+           031.Black_billed_Cuckoo       0.50      0.33      0.40         9
+               032.Mangrove_Cuckoo       0.40      0.67      0.50         3
+          033.Yellow_billed_Cuckoo       0.56      0.62      0.59         8
+       034.Gray_crowned_Rosy_Finch       0.67      0.33      0.44         6
+                  035.Purple_Finch       0.50      0.86      0.63         7
+              036.Northern_Flicker       0.77      0.77      0.77        13
+            037.Acadian_Flycatcher       0.35      0.80      0.48        10
+      038.Great_Crested_Flycatcher       0.00      0.00      0.00         8
+              039.Least_Flycatcher       0.00      0.00      0.00         7
+        040.Olive_sided_Flycatcher       1.00      1.00      1.00         2
+     041.Scissor_tailed_Flycatcher       0.67      0.46      0.55        13
+          042.Vermilion_Flycatcher       0.60      0.43      0.50         7
+     043.Yellow_bellied_Flycatcher       0.00      0.00      0.00        10
+                   044.Frigatebird       0.83      0.62      0.71         8
+               045.Northern_Fulmar       0.38      0.71      0.50         7
+                       046.Gadwall       1.00      0.40      0.57         5
+            047.American_Goldfinch       0.40      0.22      0.29         9
+            048.European_Goldfinch       0.75      0.55      0.63        11
+           049.Boat_tailed_Grackle       0.75      0.55      0.63        11
+                   050.Eared_Grebe       0.64      0.90      0.75        10
+                  051.Horned_Grebe       1.00      0.38      0.55         8
+             052.Pied_billed_Grebe       0.67      1.00      0.80         4
+                 053.Western_Grebe       0.90      1.00      0.95         9
+                 054.Blue_Grosbeak       0.43      0.60      0.50         5
+              055.Evening_Grosbeak       1.00      0.45      0.62        11
+                 056.Pine_Grosbeak       0.50      0.43      0.46         7
+        057.Rose_breasted_Grosbeak       0.67      0.50      0.57         4
+              058.Pigeon_Guillemot       1.00      0.75      0.86         8
+               059.California_Gull       0.00      0.00      0.00         6
+          060.Glaucous_winged_Gull       0.80      0.73      0.76        11
+                 061.Heermann_Gull       1.00      0.25      0.40         4
+                  062.Herring_Gull       0.50      0.50      0.50         6
+                    063.Ivory_Gull       1.00      0.57      0.73         7
+              064.Ring_billed_Gull       0.33      0.33      0.33         3
+             065.Slaty_backed_Gull       0.75      0.60      0.67         5
+                  066.Western_Gull       0.31      0.80      0.44         5
+              067.Anna_Hummingbird       0.14      0.25      0.18         4
+     068.Ruby_throated_Hummingbird       0.33      0.12      0.18         8
+            069.Rufous_Hummingbird       0.64      0.70      0.67        10
+               070.Green_Violetear       0.80      1.00      0.89         4
+            071.Long_tailed_Jaeger       0.40      0.67      0.50         6
+               072.Pomarine_Jaeger       0.38      0.60      0.46         5
+                      073.Blue_Jay       0.90      0.90      0.90        10
+                   074.Florida_Jay       0.78      0.70      0.74        10
+                     075.Green_Jay       1.00      0.83      0.91         6
+               076.Dark_eyed_Junco       0.80      0.67      0.73         6
+             077.Tropical_Kingbird       0.50      0.50      0.50         6
+                 078.Gray_Kingbird       0.47      0.78      0.58         9
+             079.Belted_Kingfisher       0.78      0.78      0.78         9
+              080.Green_Kingfisher       0.50      0.33      0.40         3
+               081.Pied_Kingfisher       1.00      0.67      0.80         6
+             082.Ringed_Kingfisher       0.83      0.71      0.77         7
+     083.White_breasted_Kingfisher       0.69      1.00      0.81        11
+          084.Red_legged_Kittiwake       1.00      1.00      1.00         2
+                   085.Horned_Lark       0.36      0.67      0.47         6
+                  086.Pacific_Loon       1.00      1.00      1.00         6
+                       087.Mallard       0.80      0.50      0.62         8
+            088.Western_Meadowlark       0.79      0.79      0.79        14
+              089.Hooded_Merganser       0.55      1.00      0.71         6
+        090.Red_breasted_Merganser       0.89      0.73      0.80        11
+                   091.Mockingbird       0.17      0.43      0.24         7
+                     092.Nighthawk       0.42      0.62      0.50         8
+              093.Clark_Nutcracker       1.00      0.75      0.86         8
+       094.White_breasted_Nuthatch       1.00      0.62      0.77         8
+              095.Baltimore_Oriole       0.40      0.44      0.42         9
+                 096.Hooded_Oriole       0.78      0.64      0.70        11
+                097.Orchard_Oriole       0.40      0.75      0.52         8
+                  098.Scott_Oriole       0.20      0.40      0.27         5
+                      099.Ovenbird       0.75      0.43      0.55         7
+                 100.Brown_Pelican       0.42      1.00      0.59         5
+                 101.White_Pelican       0.50      0.50      0.50         4
+            102.Western_Wood_Pewee       0.80      0.44      0.57         9
+                      103.Sayornis       0.17      0.50      0.25         6
+                104.American_Pipit       0.43      0.43      0.43         7
+                105.Whip_poor_Will       0.75      0.50      0.60         6
+                 106.Horned_Puffin       0.88      0.88      0.88         8
+                  107.Common_Raven       0.00      0.00      0.00         5
+            108.White_necked_Raven       0.86      0.60      0.71        10
+             109.American_Redstart       0.71      0.71      0.71         7
+                     110.Geococcyx       0.80      0.80      0.80         5
+             111.Loggerhead_Shrike       0.80      0.27      0.40        15
+             112.Great_Grey_Shrike       0.43      0.86      0.57         7
+                 113.Baird_Sparrow       0.50      0.67      0.57         9
+        114.Black_throated_Sparrow       0.44      0.73      0.55        11
+                115.Brewer_Sparrow       0.62      0.56      0.59         9
+              116.Chipping_Sparrow       0.56      0.45      0.50        11
+          117.Clay_colored_Sparrow       0.50      0.55      0.52        11
+                 118.House_Sparrow       0.00      0.00      0.00         7
+                 119.Field_Sparrow       0.40      0.50      0.44         8
+                   120.Fox_Sparrow       0.50      0.50      0.50         2
+           121.Grasshopper_Sparrow       1.00      0.36      0.53        11
+                122.Harris_Sparrow       1.00      0.25      0.40         8
+               123.Henslow_Sparrow       0.67      0.57      0.62         7
+              124.Le_Conte_Sparrow       0.19      0.57      0.29         7
+               125.Lincoln_Sparrow       0.38      0.27      0.32        11
+   126.Nelson_Sharp_tailed_Sparrow       0.57      0.50      0.53         8
+              127.Savannah_Sparrow       0.00      0.00      0.00         9
+               128.Seaside_Sparrow       0.42      0.56      0.48         9
+                  129.Song_Sparrow       0.67      0.50      0.57        12
+                  130.Tree_Sparrow       0.00      0.00      0.00         5
+                131.Vesper_Sparrow       0.28      0.78      0.41         9
+         132.White_crowned_Sparrow       0.00      0.00      0.00         8
+        133.White_throated_Sparrow       0.57      0.57      0.57         7
+          134.Cape_Glossy_Starling       0.67      0.80      0.73        10
+                  135.Bank_Swallow       1.00      0.33      0.50         6
+                  136.Barn_Swallow       0.25      0.20      0.22         5
+                 137.Cliff_Swallow       0.33      0.29      0.31         7
+                  138.Tree_Swallow       0.75      0.33      0.46         9
+               139.Scarlet_Tanager       1.00      0.60      0.75         5
+                140.Summer_Tanager       0.60      0.60      0.60         5
+                    141.Artic_Tern       0.50      0.08      0.14        12
+                    142.Black_Tern       0.25      0.17      0.20         6
+                  143.Caspian_Tern       0.30      0.82      0.44        11
+                   144.Common_Tern       1.00      0.25      0.40         8
+                  145.Elegant_Tern       0.33      0.67      0.44         3
+                 146.Forsters_Tern       0.50      0.57      0.53         7
+                    147.Least_Tern       0.29      0.25      0.27         8
+           148.Green_tailed_Towhee       0.44      0.50      0.47         8
+                149.Brown_Thrasher       0.75      0.67      0.71         9
+                 150.Sage_Thrasher       0.50      0.44      0.47         9
+            151.Black_capped_Vireo       0.50      0.67      0.57         6
+             152.Blue_headed_Vireo       0.67      0.67      0.67         6
+            153.Philadelphia_Vireo       1.00      0.17      0.29        12
+                154.Red_eyed_Vireo       0.00      0.00      0.00        13
+                155.Warbling_Vireo       0.03      0.33      0.05         3
+              156.White_eyed_Vireo       0.50      0.17      0.25         6
+         157.Yellow_throated_Vireo       0.62      0.50      0.56        10
+          158.Bay_breasted_Warbler       0.10      0.33      0.15         3
+       159.Black_and_white_Warbler       0.86      0.86      0.86         7
+   160.Black_throated_Blue_Warbler       0.50      0.40      0.44         5
+           161.Blue_winged_Warbler       0.67      0.29      0.40         7
+                162.Canada_Warbler       0.57      0.40      0.47        10
+              163.Cape_May_Warbler       0.39      0.78      0.52         9
+              164.Cerulean_Warbler       0.40      0.40      0.40         5
+        165.Chestnut_sided_Warbler       1.00      0.78      0.88         9
+         166.Golden_winged_Warbler       0.35      0.67      0.46        12
+                167.Hooded_Warbler       0.55      0.67      0.60         9
+              168.Kentucky_Warbler       1.00      0.36      0.53        11
+              169.Magnolia_Warbler       0.33      0.11      0.17         9
+              170.Mourning_Warbler       0.64      1.00      0.78         7
+                171.Myrtle_Warbler       0.25      0.50      0.33         4
+             172.Nashville_Warbler       0.17      0.17      0.17         6
+        173.Orange_crowned_Warbler       0.75      0.43      0.55         7
+                  174.Palm_Warbler       0.17      0.17      0.17         6
+                  175.Pine_Warbler       0.20      0.17      0.18         6
+               176.Prairie_Warbler       0.60      0.75      0.67         8
+          177.Prothonotary_Warbler       0.42      0.71      0.53         7
+              178.Swainson_Warbler       0.40      0.25      0.31         8
+             179.Tennessee_Warbler       0.00      0.00      0.00         9
+                180.Wilson_Warbler       0.27      0.43      0.33         7
+           181.Worm_eating_Warbler       0.30      0.50      0.37         6
+                182.Yellow_Warbler       0.71      0.71      0.71         7
+          183.Northern_Waterthrush       0.50      0.29      0.36         7
+         184.Louisiana_Waterthrush       0.18      0.33      0.24         6
+              185.Bohemian_Waxwing       0.57      1.00      0.73         4
+                 186.Cedar_Waxwing       0.44      0.50      0.47         8
+187.American_Three_toed_Woodpecker       0.56      0.69      0.62        13
+           188.Pileated_Woodpecker       0.79      0.79      0.79        14
+        189.Red_bellied_Woodpecker       1.00      0.57      0.73        14
+       190.Red_cockaded_Woodpecker       1.00      0.50      0.67         4
+         191.Red_headed_Woodpecker       1.00      0.38      0.56        13
+              192.Downy_Woodpecker       1.00      1.00      1.00         8
+                   193.Bewick_Wren       0.22      0.29      0.25         7
+                   194.Cactus_Wren       0.00      0.00      0.00         1
+                 195.Carolina_Wren       0.88      0.64      0.74        11
+                    196.House_Wren       1.00      0.25      0.40         4
+                    197.Marsh_Wren       0.50      0.62      0.56         8
+                     198.Rock_Wren       0.67      0.33      0.44         6
+                   199.Winter_Wren       0.82      0.75      0.78        12
+           200.Common_Yellowthroat       0.00      0.00      0.00         3
+
+                         micro avg       0.53      0.53      0.53      1509
+                         macro avg       0.57      0.52      0.51      1509
+                      weighted avg       0.60      0.53      0.53      1509
+
