@@ -3,6 +3,10 @@ import os
 USE_PICAMERA = int(os.environ.get('USE_PICAMERA',0))
 FRAME_SLEEP = float(os.getenv('FRAME_SLEEP',0))
 
+camera_server_url = os.environ.get('CAMERA_SERVER_URL', 'http://localhost:8000')
+camera_server_image_url = '{}/image'.format(camera_server_url)
+camera_server_video_feed_url = '{}/video_feed'.format(camera_server_url)
+
 interested_objects = {
 	'person',
 	'bottle',
@@ -12,6 +16,7 @@ interested_objects = {
 
 model_file_url = 'https://drive.google.com/uc?export=download&id=1fUpw_Z9dSh-LPqiXqkrJiO9JqR97XJH3'
 model_file_name = 'resnet50-stage2'
+model_path = "/home/scott/developer/git/stareightytwo/image-recognition-server/inference-server/models/resnet50-stage2"
 classes = [
     '001.Black_footed_Albatross',
     '002.Laysan_Albatross',

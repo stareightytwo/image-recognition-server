@@ -4,19 +4,19 @@ logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 
 # from darkflow.net.build import TFNet
 
-from configs import config
+from server.config import app
 
 from fastai.vision import (
     ImageDataBunch,
     create_cnn,
-    # open_image,
+    open_image,
     get_transforms,
     models,
     imagenet_stats
 )
 # import torch
 from pathlib import Path
-# from io import BytesIO
+from io import BytesIO
 # import sys
 # import uvicorn
 # import aiohttp
@@ -43,13 +43,13 @@ class Predictor():
         path = Path(__file__).parent
         data =  ImageDataBunch.single_from_classes(
             path,
-            classes,
+            app.classes,
             ds_tfms=get_transforms(),
             size=299,
         ).normalize(imagenet_stats)
 
         self.model = create_cnn(data, models.resnet50)
-        self.model.load("/home/scott/developer/git/stareightytwo/image-recognition-server/inference-server/models/resnet50-stage2")
+        self.model.load(app.model_path)
 
     def set_model_options(self, model_options):
         """Creates a new tfnet model instance using the supplied model_options.
@@ -66,6 +66,9 @@ class Predictor():
         :param detection_image_cv2: cv2 image to get an object detection prediction on
         :type detection_image_cv2: np.array
         """
-        prediction = self.tfnet.return_predict(detection_image_cv2)
+        # prediction = self.tfnet.return_predict(detection_image_cv2)
+        logging.info(type(detection_image_cv2))
+        # prediction = self.model.predict(open_image(BytesIO(detection_image_cv2.tobytes())))
+        prediction = self.model.predict(open_image(detection_image_cv2))
         logging.debug('predicted: {}'.format(prediction))
         return prediction

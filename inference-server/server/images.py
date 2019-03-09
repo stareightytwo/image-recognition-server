@@ -30,11 +30,12 @@ class Imager():
         """
 
         if not url:
-            url = config.camera_server_image_url
+            url = app.camera_server_image_url
 
         r = requests.get(url)
-        detection_image = Image.open(BytesIO(r.content))
-        detection_image_cv2 = cv2.cvtColor(np.array(detection_image), cv2.COLOR_RGB2BGR)
+        # detection_image = Image.open(BytesIO(r.content))
+        detection_image = BytesIO(r.content)
+        detection_image_cv2 = cv2.cvtColor(np.array(Image.open(detection_image)), cv2.COLOR_RGB2BGR)
 
         return detection_image, detection_image_cv2
 
@@ -45,7 +46,7 @@ class Imager():
         Returns the cv2 image, numpy.ndarray.
         """
 
-        r = Imager.get_request_from_image_camera_server(config.camera_server_image_url)
+        r = Imager.get_request_from_image_camera_server(app.camera_server_image_url)
         return Imager.get_image_from_request(r)
         
     @staticmethod

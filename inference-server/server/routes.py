@@ -10,10 +10,11 @@ from flask import (
     request
 )
 import cv2
+import numpy as np
 
 from server.images import Imager
 from server.predict import Predictor
-from server.configs import config
+from server.config import app
 
 p = Predictor()
 
@@ -46,10 +47,16 @@ def inference_loop():
 
 def single_inference():
 
-    frame = Imager.get_image_camera_server()
-    detections = p.predict(frame)
-    frame = Imager.draw_boxes_and_labels(detections, frame) 
-    bytes_string = cv2.imencode('.jpg', frame)[1].tostring()
+    # frame = Imager.get_image_camera_server()
+    frame1, frame2 = Imager.get_image_from_camera_server()
+    detections = p.predict(frame1)
+
+
+    prediction = detections[0]
+    probablity = np.array(detections[2])[np.array(detections[1])]
+    # frame = Imager.draw_boxes_and_labels(detections, frame2)
+    Imager.save_image('./imgs/{}'.format(prediction), frame2)
+    bytes_string = cv2.imencode('.jpg', frame2)[1].tostring()
     yield bytes_string
 
 
